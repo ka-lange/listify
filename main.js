@@ -34,20 +34,22 @@ function renderItems(todoItems) {
         const checked = item.completed ? 'checked': null;
         const li = document.createElement('li');
         li.setAttribute('data-key', item.id);
+        li.classList.add('p-2', 'border-bottom')
         li.innerHTML = `
-            <input type="checkbox" class="checkbox" ${checked}> 
+            <input type="radio" class="checkbox" ${checked}> 
             ${item.name}
             ${editButton}
         `;
         list.append(li);
         // add delete button to item
-        const delBtn = document.createElement('button');
-        delBtn.innerHTML = '&times;';
-        delBtn.classList.add('delete-Btn')
+        const delBtn = document.createElement('i');
+        delBtn.classList.add('bi', 'bi-trash')
+        // delBtn.classList.add('delete-Btn')
         li.appendChild(delBtn);
         delBtn.addEventListener('click', () => {
             deleteItem(li.getAttribute('data-key'));
         });
+
     });
     makeEditFunctional()
 }
