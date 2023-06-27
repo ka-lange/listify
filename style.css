@@ -32,28 +32,11 @@ li:has( > input:checked) {
 }
 
 /******** Edit Button ********/
-.editButton {
-    background: none;
-    border: 0;
-    color: #777;
-}
-.editButton:hover {
-    color: #000;
-}
-.editButton:before {
-    content: '-';
-    margin-right: 5px;
-}
+
+
 /******** Delete Button ********/
-.delete-Btn {
-    position: relative;
-    top: 1px;
-    font-size: 1.7rem;
-    color: #CC3333;
-    border: none;
-    background: #fff;
-}
-.delete-Btn:hover {
-    background: #edeef0;
+
+
+i {
     cursor: pointer;
 }
